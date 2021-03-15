@@ -17,33 +17,32 @@ tinhTien.addEventListener("click", () => {
     let loaiXe = LayLoaiXe();
     let thanhTien = 0;
 
-
     switch (loaiXe) {
         case "Grab Car":
             if (soKm.value <= 1) {
-                thanhTien = (soKm.value * 8000 ) + (tgCho.value * 2000);
+                thanhTien = soKm.value * 8000 + Math.floor(tgCho.value / 3) * 2000;
             } else if (soKm.value > 1 && soKm.value <= 19) {
-                thanhTien = (1 * 8000) + (soKm.value - 1) * 7500 + tgCho.value * 2000;
+                thanhTien = 1 * 8000 + (soKm.value - 1) * 7500 + Math.floor(tgCho.value / 3) * 2000;
             } else if (soKm.value > 19) {
-                thanhTien = (1 * 8000) + (20 * 7500) + ((soKm.value - 20) * 7000) + (tgCho.value * 2000);
+                thanhTien = 1 * 8000 + 18 * 7500 + (soKm.value - 19) * 7000 + Math.floor(tgCho.value / 3) * 2000;
             }
             break;
         case "Grab SUV":
             if (soKm.value <= 1) {
-                thanhTien = (soKm.value * 9000 ) + (tgCho.value * 3000);
+                thanhTien = soKm.value * 9000 + Math.floor(tgCho.value / 3) * 3000;
             } else if (soKm.value > 1 && soKm.value <= 19) {
-                thanhTien = (1 * 9000) + (soKm.value - 1) * 8500 + tgCho.value * 3000;
+                thanhTien = 1 * 9000 + (soKm.value - 1) * 8500 + Math.floor(tgCho.value / 3) * 3000;
             } else if (soKm.value > 19) {
-                thanhTien = (1 * 9000) + (20 * 8500) + ((soKm.value - 20) * 8000) + (tgCho.value * 3000);
+                thanhTien = 1 * 9000 + 18 * 8500 + (soKm.value - 19) * 8000 + Math.floor(tgCho.value / 3) * 3000;
             }
             break;
         case "Grab Black":
             if (soKm.value <= 1) {
-                thanhTien = (soKm.value * 10000)  +( tgCho.value * 3500);
+                thanhTien = soKm.value * 10000 + Math.floor(tgCho.value / 3) * 3500;
             } else if (soKm.value > 1 && soKm.value <= 19) {
-                thanhTien = (1 * 10000) + (soKm.value - 1) * 9500 + tgCho.value * 3500;
+                thanhTien = 1 * 10000 + (soKm.value - 1) * 9500 + Math.floor(tgCho.value / 3) * 3500;
             } else if (soKm.value > 19) {
-                thanhTien = (1 * 10000) + (20 * 9500) + ((soKm.value - 20) * 9000) + (tgCho.value * 3500);
+                thanhTien = 1 * 10000 + 18 * 9500 + (soKm.value - 19) * 9000 + Math.floor(tgCho.value / 3) * 3500;
             }
             break;
     }
